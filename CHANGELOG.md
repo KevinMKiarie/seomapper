@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/KevinMKiarie/seomapper/compare/v1.1.0...v1.2.0) (2026-07-06)
+
+
+### Features
+
+* **ci:** add Commitizen, commitlint, and Husky commit workflow ([9814b26](https://github.com/KevinMKiarie/seomapper/commit/9814b26fd76f050d8d7fcc477c0394398857a707))
+
 # [1.1.0](https://github.com/KevinMKiarie/seomapper/compare/v1.0.0...v1.1.0) (2026-07-06)
 
 
