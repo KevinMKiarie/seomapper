@@ -1,6 +1,6 @@
 {
   "name": "seomapper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SEO mapping and enhancement CLI for any tech stack",
   "type": "module",
   "main": "dist/cli.js",
