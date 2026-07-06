@@ -1,0 +1,64 @@
+{
+  "name": "seomapper",
+  "version": "0.1.0",
+  "description": "SEO mapping and enhancement CLI for any tech stack",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "seomapper": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "seo",
+    "cli",
+    "audit",
+    "web",
+    "ai-search"
+  ],
+  "author": {
+    "name": "Kiarie Mbugua",
+    "email": "KevinMKiarie@gmail.com",
+    "url": "https://github.com/KevinMKiarie"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KevinMKiarie/seomapper.git"
+  },
+  "homepage": "https://github.com/KevinMKiarie/seomapper#readme",
+  "bugs": {
+    "url": "https://github.com/KevinMKiarie/seomapper/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
+    "@clack/prompts": "^0.7.0",
+    "@google/generative-ai": "^0.24.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0",
+    "cli-table3": "^0.6.3",
+    "commander": "^12.1.0",
+    "openai": "^6.45.0",
+    "ora": "^5.4.1",
+    "playwright": "^1.44.0"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@types/node": "^20.0.0",
+    "semantic-release": "^25.0.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.0",
+    "typescript": "^5.4.0"
+  }
+}
