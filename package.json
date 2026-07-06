@@ -1,6 +1,6 @@
 {
   "name": "seomapper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "SEO mapping and enhancement CLI for any tech stack",
   "type": "module",
   "main": "dist/cli.js",
@@ -57,10 +57,10 @@
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/node": "^20.0.0",
+    "@types/node": "^26.1.0",
     "semantic-release": "^25.0.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.0",
-    "typescript": "^5.4.0"
+    "typescript": "^6.0.3"
   }
 }
