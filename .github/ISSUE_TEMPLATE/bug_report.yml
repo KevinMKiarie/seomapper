@@ -1,0 +1,48 @@
+name: Bug report
+description: Something is broken or producing wrong results
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: seomapper version
+      placeholder: "e.g. 0.2.1 — run: seomapper --version"
+    validations:
+      required: true
+
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: "e.g. 20.11.0 — run: node --version"
+    validations:
+      required: true
+
+  - type: input
+    id: command
+    attributes:
+      label: Command you ran
+      placeholder: "seomapper scan example.com --output html"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behaviour
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behaviour
+      description: Paste the full terminal output including any error messages.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: URL you scanned (if public), OS, anything else that helps reproduce this.

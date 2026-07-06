@@ -43,7 +43,7 @@ npx seomapper scan yoursite.com
 ```
 
 Node.js 18 or newer is required.
-
+`
 ---
 
 ## Quick start

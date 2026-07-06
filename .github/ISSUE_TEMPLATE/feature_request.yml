@@ -1,0 +1,42 @@
+name: Feature request
+description: Suggest a new SEO rule, command, or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the gap or pain point. Include a real-world example if you have one.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: How should seomapper behave? If it's a new rule, what HTML pattern triggers it and what fix should it suggest?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - New SEO rule
+        - New AEO / AI Search rule
+        - CLI flag or command
+        - Output format
+        - AI provider support
+        - MCP tool
+        - Performance
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Any other approaches you thought about?
