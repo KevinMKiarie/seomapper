@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node.js >=18](https://img.shields.io/badge/node-%3E%3D18-brightgreen)](https://nodejs.org)
 
-Built by [Kiarie Mbugua](https://github.com/KevinMKiarie).
+Built by [ Kevin Kiarie](https://github.com/KevinMKiarie).
 
 ---
 
