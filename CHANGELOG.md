@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/KevinMKiarie/seomapper/compare/v1.0.0...v1.1.0) (2026-07-06)
+
+
+### Features
+
+* auto-run onboarding wizard on first invocation ([f11a1ba](https://github.com/KevinMKiarie/seomapper/commit/f11a1baceac73e1b6a8ec76056616ddcba01d834))
+
 # 1.0.0 (2026-07-06)
 
 
