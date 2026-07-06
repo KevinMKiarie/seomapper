@@ -1,0 +1,14 @@
+{
+  "conventionalCommits.scopes": [
+    "cli",
+    "rules",
+    "crawler",
+    "reporter",
+    "ai",
+    "mcp",
+    "scoring",
+    "deps",
+    "ci"
+  ],
+  "git.inputValidation": true
+}

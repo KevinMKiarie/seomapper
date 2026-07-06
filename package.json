@@ -10,7 +10,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsx src/cli.ts",
-    "start": "node dist/cli.js"
+    "start": "node dist/cli.js",
+    "commit": "cz",
+    "prepare": "husky"
   },
   "files": [
     "dist"
@@ -36,6 +38,11 @@
     "url": "https://github.com/KevinMKiarie/seomapper/issues"
   },
   "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -55,9 +62,14 @@
     "playwright": "^1.44.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^21.2.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@types/node": "^26.1.0",
+    "commitizen": "^4.3.2",
+    "commitlint": "^21.2.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.7",
     "semantic-release": "^25.0.5",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.0",
