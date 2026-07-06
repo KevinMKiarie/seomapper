@@ -11,6 +11,7 @@ import {
 import { writeFileSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { homedir } from 'os';
 import chalk from 'chalk';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -124,7 +125,7 @@ export async function runInit(): Promise<void> {
       depth: depthValue,
       output: output as 'cli' | 'json' | 'html',
     };
-    writeFileSync('.seomapperrc.json', JSON.stringify(config, null, 2) + '\n');
+    writeFileSync(join(homedir(), '.seomapperrc.json'), JSON.stringify(config, null, 2) + '\n');
   }
 
   note(

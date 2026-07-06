@@ -5,6 +5,7 @@ import { exec } from 'child_process';
 import { existsSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
+import { homedir } from 'os';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const { version } = JSON.parse(
@@ -37,13 +38,16 @@ interface RcConfig {
 }
 
 function loadRc(): RcConfig {
-  const rcPath = join(process.cwd(), '.seomapperrc.json');
-  if (!existsSync(rcPath)) return {};
-  try {
-    return JSON.parse(readFileSync(rcPath, 'utf-8')) as RcConfig;
-  } catch {
-    return {};
+  const candidates = [
+    join(process.cwd(), '.seomapperrc.json'),
+    join(homedir(), '.seomapperrc.json'),
+  ];
+  for (const p of candidates) {
+    if (existsSync(p)) {
+      try { return JSON.parse(readFileSync(p, 'utf-8')) as RcConfig; } catch { /* ignore */ }
+    }
   }
+  return {};
 }
 
 function createAIProvider(name: string): AIProvider {
@@ -185,4 +189,14 @@ program
     }
   });
 
-program.parse();
+(async () => {
+  const globalRc = join(homedir(), '.seomapperrc.json');
+  const firstArg = process.argv[2];
+  const skipWizard = !firstArg || firstArg === 'init' || firstArg === 'serve' || firstArg.startsWith('-');
+
+  if (!existsSync(globalRc) && !skipWizard) {
+    await runInit();
+  }
+
+  program.parse();
+})();
