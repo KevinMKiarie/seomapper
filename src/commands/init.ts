@@ -69,6 +69,7 @@ export async function runInit(): Promise<void> {
       message: 'How many pages to scan per run?',
       placeholder: '20',
       validate(value) {
+        if (!value) return 'Please enter a number greater than 0';
         const n = parseInt(value, 10);
         if (isNaN(n) || n < 1) return 'Please enter a number greater than 0';
       },
