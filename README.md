@@ -33,16 +33,37 @@ seomapper crawls any live website, runs 51 SEO and AEO rule checks across every 
 ## Installation
 
 ```bash
+# No install needed — just run
+npx seomapper scan yoursite.com
+
+# Install globally for repeated use
 npm install -g seomapper
-```
+seomapper scan yoursite.com
 
-Or run without installing:
-
-```bash
+# Add to a specific project (no global install)
+npm install seomapper
 npx seomapper scan yoursite.com
 ```
 
+**Project-level usage** — add to your `package.json` scripts so the whole team shares the same version and flags:
+
+```json
+"scripts": {
+  "seo": "seomapper scan https://yoursite.com",
+  "seo:ci": "seomapper scan https://yoursite.com --threshold 80"
+}
+```
+
+```bash
+npm run seo
+```
+
 Node.js 18 or newer is required.
+
+> **nvm users:** if `seomapper` is not found after a global install, add npm's bin to your PATH:
+> ```bash
+> echo 'export PATH="$(npm config get prefix)/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+> ```
 `
 ---
 
